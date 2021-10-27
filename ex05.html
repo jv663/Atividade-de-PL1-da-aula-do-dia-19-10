@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ex05" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>ex05</title>
+    <script language="javascript">
+    function enviarDados()
+        {
+            var n1, n2, n3, n4, media, prefixo;
+            n1 = parseFloat(document.getElementById("n1").value);
+            n2 = parseFloat(document.getElementById("n2").value);
+            n3 = parseFloat(document.getElementById("n3").value);
+            n4 = parseFloat(document.getElementById("n4").value);
+
+           media = (n1 + n2 + n3 + n4) / 4;
+
+           prefixo = ("A média dos números é de: ")
+           
+           document.getElementById("media1").innerHTML = "(" + n1 + " + " + n2 + " + " + n3 + " + " + n4 + ") / 4 = " + media;
+           document.getElementById("media2").innerHTML = prefixo + media;
+
+    
+        }
+    </script>
+
+</head>
+<body>
+    <p><h1>5. Calcular e exibir a média aritmética de quatro valores quaisquer que serão digitados.</h1></p>
+    <table align="center">
+    <form name="notas">
+        <tr>
+        <td>Digite o 1° número:<input type="text" id="n1"></td><br>
+        <td>Digite o 2° número:<input type="text" id="n2"></td><br>
+        </tr>
+        <tr>
+        <td>Digite o 3° número:<input type="text" id="n3"></td><br>
+        <td>Digite o 4° número:<input type="text" id="n4"></td><br>
+        </tr>
+    </table>
+
+        <div class = "botao"><input type="button" value="Enviar" onclick="enviarDados();"></div>
+    </form>
+
+    <div class="total">
+    <div class="resp" id="media1"></div>
+    <div class="resp" id="media2"></div>
+    </div>
+    
+
+    
+</body>
+</html>

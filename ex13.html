@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ex13" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>ex13</title>
+
+    <script language="javascript">
+        function lados()
+            {
+                var a, b, c, resp, img;
+                a = parseFloat(document.getElementById("a").value);
+                b = parseFloat(document.getElementById("b").value);
+                c = parseFloat(document.getElementById("c").value);
+    
+                if (a + b <= c || a + c <= b || b + c <= a){
+                resp = "Esse triangulo não é válido";
+                }
+            else{
+            if (a == b && b == c) {
+                resp = "Esse triangulo é valido e é um triangulo equilatero";
+                img = "equilatero.png"
+            }
+            else if (a != b && a != c && b != c) {
+                resp  = "Esse triangulo é valido e é um triangulo escaleno";
+                img = "escaleno.png"
+            }
+            else{
+                resp = "Esse triangulo é valido e é um triangulo isoceles";  
+                img = 'isoceles.png';
+            }
+            }
+            document.getElementById("resp").innerHTML = resp;
+            document.getElementById("img").innerHTML = "<img src='"+img+"'>";
+        }
+        </script>
+
+</head>
+<body>
+    <p><h1>13. A partir de três valores que serão digitados, verificar se formam ou não um triângulo. Em caso positivo, exibir sua classificação: “Isósceles, escaleno ou equilátero”.</h1></p>
+        <form>
+        Informe o lado a: <input type="text" id="a"><br>
+        Informe o lado b: <input type="text" id="b"><br>
+        Informe o lado c: <input type="text" id="c"><br>
+        <div class = "botao"><input type="button" value="Enviar" onclick="lados();"></div>
+        </form>
+        
+            <div class="total2">
+            <div class="resp" id="resp"></div>
+            <div class = "img, resp" align="center" id="img" ></div>
+            </div>
+        
+    
+</body>
+</html>
